@@ -1,0 +1,31 @@
+*** Native App:
+- Android: Java, Kotlin
+- iOS: Swift, Objective-C.
+* Ưu điểm:
+- Hiệu năng tốt.
+- Trải nghiệm người dùng mượt mà.
+- Lựa chọn tốt nhất cho ứng dụng game, chỉnh sửa hình ảnh, video.
+* Nhược điểm:
+- Tốn nhiều chi phí, tài nguyên để phát triển.
+- Chất lượng của 2 nền tảng không giống nhau.
+- Bảo trì 2 mã nguồn (cần nhiều nhân lực, chi phí).
+- Thời gian release không giống nhau.
+*** Cross Platform:
+Android, iOS: Flutter, React Native, Xamarin.
+* Ưu điểm: 
+- Chạy trên cả 2 nền tảng với cùng một mã nguồn.
+- Giảm thiểu chi phí, thời gian phát triển và bảo trì.
+- Chất lượng trên 2 nền tảng là giống nhau.
+- Trải nghiệm người dùng tốt.
+- Hiện tại Cross Platform viết bằng Flutter có thể cho hiệu năng ngang với Native App.
+* Nhược điểm:
+- Phát triển các ứng dụng có sử dụng camera như chỉnh sửa hình ảnh, video,... bắt buộc nhà phát triển
+phải có kiến thức về Native App để có thể giải quyết các vấn đề trên.
+- Giới hạn về Frameworks.
+
+*** Tại sao Flutter là lựa chọn hoàn hảo để phát triển ứng dụng di động?
+- Flutter core được phát triển trên C++ và Dart.
+- Thư viện Skia được sử dụng để render UI.
+- Chạy đa nền tảng bằng Dart Virtual Machine (DVM).
+- "Everything is widget".
+- Sử dụng "Declarative" để xây dựng UI.

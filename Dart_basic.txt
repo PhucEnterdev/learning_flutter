@@ -1,0 +1,12 @@
+*** Giới thiệu về Dart:
+- Dart là ngôn ngữ lập trình được phát triển bởi Google và release vào năm 2011.
+- Dart là ngôn ngữ đa mô hình:
++ Lập trình hàm (functional).
++ Điều lệnh (imperative).
++ Hướng đối tượng (object-oriented).
+* Sức mạnh của Dart:
++ Hot reload.
++ Phát triển sản phẩm chất lượng cao.
++ Cung cấp ngôn ngữ và môi trường run times cho Flutter apps.
+* Kiểu dữ liệu trong Dart:
+- Number, Strings, Booleans, Lists, Maps.
