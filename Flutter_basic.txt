@@ -1,0 +1,87 @@
+* Trong Flutter sẽ có 2 structure cơ bản là Row và Column.
++ Row bắt đầu từ trái sang phải.
++ Column bắt đầu từ trên xuống dưới.
+* Đối với Row:
+- MainAxisAlignment:
+	+ start: các widget nằm hết về bên trái
+	+ center: các widget nằm ở giữa
+	+ end: các widget nằm bên phải
+	+ spaceBetween: có khoảng cách ở giữa các widget (các khoảng cách là bằng nhau) trừ widget ở đầu và ở cuối
+	+ spaceAround: mỗi widget sẽ cách một khoảng (ví dụ 16px, thì các widget nằm trong sẽ cách 32px, còn wiget left và right sẽ là 16px)
+	+ spaceEvenly: có khoảng cách giữa các widget (kể cả left và right).
+- CrossAxisAlignment:
+	+ start: các widget được kéo lên trên => tương tự gavity trong Native Android
+	+ end: các widget được kéo xuống dưới => tương tự gavity trong Native Android
+	+ center: các widget được canh giữa  => tương tự gavity trong Native Android
+	+ stretch: các widget có chiều cao thấp hơn so với widget còn lại sẽ được kéo dãn ra bằng nhau.
+* Đối với Column:
+- MainAxisAlignment:
+	+ start: các widget nằm ở phía bên trên canh trái
+	+ center: các widget nằm ở giữa canh trái
+	+ end: các widget nằm ở dưới canh trái
+	+ spaceBetween: khoảng cách giữa các widget bằng nhau (trừ top và bottom)
+	+ spaceAround: mỗi widget sẽ cách một khoảng (ví dụ 16px, thì các widget nằm trong sẽ cách 32px, còn wiget top và bottom sẽ là 16px)
+	+ spaceEvenly: mỗi widget sẽ cách nhau một khoảng bằng nhau (kể cả top và bottom)
+- CrossAxisAlignment: (đi từ left sang right)
+	+ start: các widget canh trái
+	+ center: các widget canh giữa
+	+ end: các widget canh phải
+	+ stretch: các widget có chiều rộng nhỏ hơn sẽ được kéo dãn ra bằng với widget có chiều rộng to nhất.
+* Row/Column đều có thuộc tính MainAxisSize có 2 giá trị min và max =>tương tự như wrap_content và match_parent trong Native Android
+* Expanded widget: (tương tự như layout_weight trong Android Native), khi có các widget cố định thì nó chỉ tính cho phần còn lại.
+* Wrap widget:
+	+ Hướng Horizontal: sẽ đưa các widget bị tràn xuống hàng dưới.
+	+ Hướng Vertical: sẽ đưa các widget bị tràn sang bên phải.
+* Stack kết hợp Positioned widget: (tương tự như ContrainLayout trong Android Native)
+
+
+*** Một số Basic Widget trong Flutter
+* MaterialApp Widget:
+- Thiết kế theo phong cách Material.
+- Cung cấp những lợi ích ảnh hưởng đến sub-tree widget như là Theme, Router, Localization, Navigator,...
+- Không có ràng buộc khi sử MaterialApp ngay cả khi không thiết kế UI theo Material vẫn có thể customize theo phong cách riêng.
+* Scaffold widget: (tương tự Screen Activity trong Native Android và được gọi là Page vì có thể chạy trên cả trang web và desktop).
+* Text: là widget không có children và single style
+* Rich Text: multi style có thể custom nhiều style trên 1 text
+ví dụ: const Text.rich{
+	TextSpan{
+		text: 'Hello',
+		children: <TextSpan>{
+			TextSpan{text: ' Flutter! ', style: TextStyle{
+				fontWeight: FontWeight.bold}},
+			TextSpan{text: 'How are you feel today?'},
+			}
+		}
+	}
+}
+* Image: là widget không có children và có các contructor như là:
+- Image.assets('assets/image/dart_lang.png') => lấy hình ảnh từ assets (giống drawable Native Android) để hiển thị.
+- Image.network('http://.....png') => lấy hình ảnh từ internet để hiển thị
+- Image.file(File file) => lấy hình ảnh từ gallary để hiển thị.
+* ElevatedButton:
+- Thiết kế theo phong cách Material.
+ví dụ: ElevatedButton{
+	child: Text('Click me'),
+	onPressed: (){
+		// do something
+	}
+};
+ví dụ về ElevatedButton.icon
+ElevatedButton.icon{
+	icon: Icon(Icons.home),
+	label: Text('Home'),
+	onPressed: (){
+		// do something
+	}
+};
+ví dụ về TextButton
+TextButton{
+	child: Text('Click me'),
+	onPressed: (){
+		// do something
+	}
+};
+
+*** So sánh giữa Material và Cupertino Style
+* Material: là phong cách thiết kế được phát triển bởi Google nhằm tạo ra những thiết kế chất lượng cao
+trên Android, iOS, Flutter và web.
