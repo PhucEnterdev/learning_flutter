@@ -24,64 +24,38 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: IconButton(
-          icon: const Icon(Icons.menu),
-          onPressed: () {
-            print("Click me");
-          },
-        ),
-        title: const Text('My App'),
+        title: const Text('Enter App'),
       ),
       body: const Center(
-        /*** Text */
-        // child: Text('Hello Flutter Hello Hello',
-        //   overflow: TextOverflow.ellipsis,
-        //   maxLines: 1,
-        //   style: TextStyle(
-        //     fontSize: 32,
-        //     color: Colors.white,
-        //     fontWeight: FontWeight.bold,
-        //     backgroundColor: Colors.lightBlue,
-        //   ),
-        // ),
-        /** Image*/
-        // child: Image.network('https://res.cloudinary.com/ddfy40mji/image/upload/v1682734114/sharevideoonline/v3fz1jtmouixowzgw2kj.jpg'),
-        /** Button*/
-        // child: TextButton(
-        //   // child: const Text('Click me'),
-        //   child: Image.network('https://res.cloudinary.com/ddfy40mji/image/upload/v1682734114/sharevideoonline/v3fz1jtmouixowzgw2kj.jpg'),
-        //   onPressed: (){
-        //     print('Click me please');
-        //   },
+          child: EnterApp(),
+      ),
+    );
+  }
+}
 
-        /*** TextButton.icon*/
-        // child: TextButton.icon(
-        //     onPressed: () {
-        //       print('This is icon');
-        //     },
-        //     icon: const Icon(Icons.favorite),
-        //     label: const Text('This is icon')),
+class EnterApp extends StatelessWidget{
+  const EnterApp({super.key});
 
-        /** ElevatedButton*/
-        // child: ElevatedButton(
-        //     onPressed: () {
-        //       print('This is icon');
-        //     },
-        //     child: const Text('This is icon')),
-
-        /** ElevatedButton.icon*/
-        // child: ElevatedButton.icon(
-        //     onPressed: () {
-        //       print('This is icon');
-        //     },
-        //     icon: const Icon(Icons.favorite),
-        //     label: const Text('This is icon')),
-
-        /** Text multi style*/
-        child: Text.rich(
-          TextSpan(text: 'Hi',
-          style: TextStyle(fontWeight: FontWeight.bold, color: Colors.blue)),
-        ),
+  @override
+  Widget build(BuildContext context) {
+    return const Text(
+        '👋 Hi, I’m @PhucEnterdev I’m currently learning at Can Tho University. '
+        'I long to become an Mobile developer and FullStack Developer in the future. '
+        'I\'m looking to collaborate on with your company',
+      textDirection: TextDirection.ltr,
+      textAlign: TextAlign.justify,
+      overflow: TextOverflow.visible,
+      textScaleFactor: 1.5,
+      style: TextStyle(
+        color: Colors.white,
+        backgroundColor: Colors.blue,
+        fontSize: 15,
+        fontWeight: FontWeight.w500,
+        fontStyle: FontStyle.normal,
+        fontFamily: 'Times New Roman',
+        wordSpacing: 5,
+        letterSpacing: 10,
+        decoration: TextDecoration.lineThrough,
       ),
     );
   }

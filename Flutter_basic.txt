@@ -85,3 +85,10 @@ TextButton{
 *** So sánh giữa Material và Cupertino Style
 * Material: là phong cách thiết kế được phát triển bởi Google nhằm tạo ra những thiết kế chất lượng cao
 trên Android, iOS, Flutter và web.
+
+*** So sánh và phân biệt StagelessWidget và StagefulWidget
+- Cả StagelessWidget và StagefulWidget đều phải override lại hàm build.
+- StagefulWidget có thể khởi tạo giá trị ban đầu ở hàm initStage() và có thể thay đổi trạng thái ở hàm setStage().
+- Khi sử dụng StagefulWidget thì phải tạo một class kế thừa từ Stage<Lớp extends từ StagefulWidget>.
+- StagelessWidget được sử dụng cho các widget cố định, không tương tác với người dùng.
+- StagefulWidget sử dụng cho các widget động, có sự tương tác với người dùng.
